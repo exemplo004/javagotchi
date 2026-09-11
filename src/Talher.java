@@ -2,13 +2,16 @@ public abstract class Talher {
     public enum Tipo { COLHER, GARFO, FACA }
     public enum Material { MADEIRA, FERRO, PRATA }
 
-    float danoImpactante;
-    float danoPerfurante;
-    float danoCortante;
-    String tipo;     // Colher, garfo, ou faca
-    Material material;
+    private float danoImpactante;
+    private float danoPerfurante;
+    private float danoCortante;
+    private final Tipo tipo;
+    private final Material material;
 
     public Talher(Tipo tipo, Material material) {
+        this.tipo = tipo;
+        this.material = material;
+
         danoCortante = 5;
         danoPerfurante = 5;
         danoImpactante = 5;
