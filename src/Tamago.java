@@ -1,8 +1,8 @@
 public class Tamago {
-    private double pv;
+    public double pv;
     private double fome;
     private double saude; // Tomar banho pra evitar doencas(?)
-    private final String nome;
+    public final String nome;
 
     public Tamago(String nome) {
         this.nome = nome;
