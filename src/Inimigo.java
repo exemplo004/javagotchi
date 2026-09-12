@@ -41,8 +41,13 @@ public class Inimigo {
         }
     }
 
-        public void Atacar(Tamago jogador) {
-            System.out.printf("%s ataca %s e causa %d de dano.\n", this.tipo, jogador.nome, danoBase);
-            jogador.pv -= this.danoBase;
-        }
+    public void Atacar(Tamago jogador) {
+        System.out.printf("%s ataca %s e causa %d de dano.\n", this.tipo, jogador.nome, danoBase);
+        jogador.pv -= this.danoBase;
+    }
+
+    @Override
+    public String toString() {
+        return "Eu sou um(a) " + this.tipo.name() + " do mal!";
+    }
 }
