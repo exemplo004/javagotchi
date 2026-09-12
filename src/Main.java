@@ -14,10 +14,10 @@ void main() {
         else break;
     }
 
-    Tamago tama = new Tamago(entrada);
-    System.out.println(tama);
-
-    Talher talher = new Talher(Talher.Tipo.COLHER, Talher.Material.FERRO);
-
-    System.out.println(talher);
+    // Loop do jogo
+    while (true) {
+        Inimigo vilao = dir.gerarInimigo();
+        System.out.println(vilao);
+        io.esperarEnter();
+    }
 }
