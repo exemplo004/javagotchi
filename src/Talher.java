@@ -1,4 +1,4 @@
-public abstract class Talher {
+public class Talher {
     public enum Tipo { COLHER, GARFO, FACA }
     public enum Material { MADEIRA, FERRO, PRATA }
 
@@ -31,5 +31,13 @@ public abstract class Talher {
         danoImpactante *= mult;
         danoPerfurante *= mult;
         danoCortante *= mult;
+    }
+
+    @Override
+    public String toString() {
+        return "Um(a) " + tipo + " de " + material + "." +
+                "\nImpactante: " + danoImpactante +
+                "\nPerfurante: " + danoPerfurante +
+                "\nCortante: " + danoCortante;
     }
 }

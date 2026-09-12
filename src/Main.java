@@ -14,4 +14,8 @@ void main() {
 
     Tamago tama = new Tamago(entrada);
     System.out.println(tama);
+
+    Talher talher = new Talher(Talher.Tipo.COLHER, Talher.Material.FERRO);
+
+    System.out.println(talher);
 }
