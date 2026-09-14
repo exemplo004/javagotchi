@@ -22,7 +22,8 @@ public class Inimigo {
         SANDUICHE (30, 3.0, 0.5, 0.2, 0.0),
         LASANHA   (80, 3.0, 0.3, 0.1, 0.0),
         BOLO      (50, 2.0, 0.2, 0.0, 0.2),
-        SALADA    (20, 4.0, 0.0, 0.0, 0.0);
+        SALADA    (20, 4.0, 0.0, 0.0, 0.0),
+        MACARRAO  (70, 5.0, 0.9, 0.0, 0.6);
 
         public final double pv;
         public final double danoBase;
