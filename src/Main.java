@@ -1,4 +1,5 @@
 Diretor dir = new Diretor();
+Io io = new Io();
 
 void main() {
     Scanner sc = new Scanner(System.in);
