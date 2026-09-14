@@ -19,10 +19,10 @@ public class Inimigo {
     }
 
     public enum Tipo {
-        SANDUICHE (3.0, 30, 0.5, 0.2, 0.0),
-        LASANHA   (3.0, 80, 0.3, 0.1, 0.0),
-        BOLO      (2.0, 50, 0.2, 0.0, 0.2),
-        SALADA    (4.0, 20, 0.0, 0.0, 0.0);
+        SANDUICHE (30, 3.0, 0.5, 0.2, 0.0),
+        LASANHA   (80, 3.0, 0.3, 0.1, 0.0),
+        BOLO      (50, 2.0, 0.2, 0.0, 0.2),
+        SALADA    (20, 4.0, 0.0, 0.0, 0.0);
 
         public final double pv;
         public final double danoBase;
