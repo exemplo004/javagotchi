@@ -14,6 +14,8 @@ void main() {
         else break;
     }
 
+    Tamago jogador = new Tamago(entrada);
+
     // Loop do jogo
     while (true) {
         int escolha;
@@ -29,8 +31,8 @@ void main() {
 
         switch (escolha) {
             case 1: Acoes.Comer(dir, io); break;
-            case 2: Acoes.Brincar(); break;
-            case 3: Acoes.Dormir(); break;
+            case 2: Acoes.Brincar(jogador); break;
+            case 3: Acoes.Dormir(jogador); break;
             case 4: Acoes.Explorar(); break;
             default:
                 System.out.println("hmmm, como eu cheguei aqui?");
