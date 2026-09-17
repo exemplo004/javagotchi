@@ -30,4 +30,10 @@ public class Tamago {
                 "Higiene:    " + this.higiene +
                 "Felicidade: " + this.felicidade;
     }
+
+    public void UsarItem(Tamago j) {
+    }
+
+    public void AlterarEquipamento() {
+    }
 }

@@ -1,9 +1,40 @@
 public class Acoes {
     // TODO completar o combate em turnos
-    public static void Comer(Diretor dir, Io io) {
-        Inimigo vilao = dir.gerarInimigo();
-        System.out.println(vilao);
-        io.esperarEnter();
+    public static void Comer(Tamago j, Diretor dir, Io io) {
+        Inimigo opo = dir.gerarInimigo();
+        System.out.println(opo);
+
+        while (true) {
+            int escolha;
+            System.out.println("A wild " + opo.tipo + " appears!\n" +
+                    "O que você fará?\n " +
+                    "1. Atacar\n" +
+                    "2. Usar um item\n" +
+                    "3. Alterar equipamento\n" +
+                    "4. Tentar fugir\n" +
+                    "0. Sair do jogo"
+            );
+            escolha = io.getIntEntre(0, 4);
+
+            switch (escolha) {
+                case 1: Acoes.Atacar(j, opo); break;
+                case 2: j.UsarItem(j); break;
+                case 3: j.AlterarEquipamento(); break;
+                case 4: Acoes.Fugir(); break;
+                case 0: System.exit(0);
+                default: System.out.println("hmmm, como eu cheguei aqui?");
+            }
+        }
+    }
+
+    // TODO
+    private static void Fugir() {
+
+    }
+
+    // TODO
+    private static void Atacar(Tamago j, Inimigo opo) {
+
     }
 
     public static void Brincar(Tamago t) {
