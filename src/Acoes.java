@@ -14,6 +14,7 @@ public class Acoes {
         // TODO: passar o tempo
         t.fome += deltaFome;
         t.higiene += deltaHigiene;
+        t.felicidade += deltaFelicidade;
 
         System.out.print(t.nome + "Brincou na lama e se divertiu horrores!\n" +
                 "\tFELICIDADE: " + t.felicidade + " (" + deltaFelicidade + ")\n" +
