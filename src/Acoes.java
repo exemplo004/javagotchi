@@ -6,9 +6,19 @@ public class Acoes {
         io.esperarEnter();
     }
 
-    // TODO
-    public static void Brincar() {
-        System.out.println("O usuário escolheu brincar, e aí?");
+    public static void Brincar(Tamago t) {
+        int deltaFome = -30;
+        int deltaHigiene = -50;
+        int deltaFelicidade = 80;
+
+        // TODO: passar o tempo
+        t.fome += deltaFome;
+        t.higiene += deltaHigiene;
+
+        System.out.print(t.nome + "Brincou na lama e se divertiu horrores!\n" +
+                "\tFELICIDADE: " + t.felicidade + " (" + deltaFelicidade + ")\n" +
+                "\tFOME: " + t.fome + " (" + deltaFome + ")\n" +
+                "\tHIGIENE: " + t.higiene + " (" + deltaHigiene + ")");
     }
 
     // TODO

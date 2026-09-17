@@ -1,13 +1,16 @@
 public class Tamago {
-    public double pv;
-    private double fome;
-    private double saude; // Tomar banho pra evitar doencas(?)
     public final String nome;
+    public double pv;
+    public double fome;
+    public double higiene; // Tomar banho pra evitar doencas(?)
+    public double felicidade;
 
     public Tamago(String nome) {
         this.nome = nome;
         this.pv = 100;
         this.fome = 0;
+        this.higiene = 100;
+        this.felicidade = 100;
     }
 
     public void Explorar() {
