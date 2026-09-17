@@ -1,5 +1,5 @@
 public class Acoes {
-    // TODO
+    // TODO completar o combate em turnos
     public static void Comer(Diretor dir, Io io) {
         Inimigo vilao = dir.gerarInimigo();
         System.out.println(vilao);
@@ -22,9 +22,19 @@ public class Acoes {
                 "\tHIGIENE: " + t.higiene + " (" + deltaHigiene + ")");
     }
 
-    // TODO
-    public static void Dormir() {
-        System.out.println("O usuário escolheu , e aí?");
+    public static void Dormir(Tamago t) {
+        if (t.fome < 30) {
+            System.out.println(t. nome + " está com fome demais para ir dormir... coma alguma coisa!");
+        } else {
+            System.out.println(t.nome + " foi dormir.\nZZZzzz...");
+
+            // TODO: passar o tempo
+            t.energia = 100;
+            t.fome = 25;
+            t.pv += 30;
+
+            System.out.println("Bom dia flor do dia!\n" + t + "\n");
+        }
     }
 
     // TODO
