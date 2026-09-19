@@ -1,10 +1,12 @@
+package com.terminalroot.game;
+
 public class Talher {
     public enum Tipo { COLHER, GARFO, FACA }
     public enum Material { MADEIRA, FERRO, PRATA }
 
-    private float danoImpactante;
-    private float danoPerfurante;
-    private float danoCortante;
+    private double danoImpactante;
+    private double danoPerfurante;
+    private double danoCortante;
     private final Tipo tipo;
     private final Material material;
 
@@ -23,7 +25,7 @@ public class Talher {
         }
 
         double mult = switch (material) {
-            case MADEIRA -> 1;
+            case MADEIRA -> 1.0;
             case FERRO -> 1.2;
             case PRATA -> 1.5;
         };
@@ -33,11 +35,16 @@ public class Talher {
         danoCortante *= mult;
     }
 
+    public double getDanoTotal() {
+        return danoImpactante + danoPerfurante + danoCortante;
+    }
+
+    public double getDanoImpactante() { return danoImpactante; }
+    public double getDanoPerfurante() { return danoPerfurante; }
+    public double getDanoCortante() { return danoCortante; }
+
     @Override
     public String toString() {
-        return "Um(a) " + tipo + " de " + material + "." +
-                "\nImpactante: " + danoImpactante +
-                "\nPerfurante: " + danoPerfurante +
-                "\nCortante: " + danoCortante;
+        return tipo + " de " + material;
     }
 }
