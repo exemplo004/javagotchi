@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Diretor dir = new Diretor();
 Io io = new Io();
 
@@ -15,6 +16,15 @@ import java.util.Scanner;
         System.out.println("Escolha um nome para o seu Tamago: ");
         entrada = sc.nextLine();
 =======
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+>>>>>>> 9942508 (Jogabilidade, resistências e console)
+=======
+package com.terminalroot.game;
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -61,6 +71,7 @@ public class Main {
         sc.close();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     Tamago jogador = new Tamago(entrada);
 
@@ -89,6 +100,9 @@ public class Main {
     }
 }
 
+=======
+}
+>>>>>>> 9942508 (Jogabilidade, resistências e console)
 =======
 }
 >>>>>>> 9942508 (Jogabilidade, resistências e console)
