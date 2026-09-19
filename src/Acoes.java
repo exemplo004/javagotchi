@@ -20,7 +20,7 @@ public class Acoes {
                 case 1: Acoes.Atacar(j, opo); break;
                 case 2: j.UsarItem(j); break;
                 case 3: j.AlterarEquipamento(); break;
-                case 4: Acoes.Fugir(); break;
+                case 4: Acoes.TentarFugir(dir); break;
                 case 0: System.exit(0);
                 default: System.out.println("hmmm, como eu cheguei aqui?");
             }
@@ -28,8 +28,8 @@ public class Acoes {
     }
 
     // TODO
-    private static void Fugir() {
-
+    private static void TentarFugir(Diretor dir, Inimigo ini) {
+        double consegueFugir  = dir.CalcularFuga(ini);
     }
 
     // TODO
