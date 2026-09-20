@@ -169,22 +169,27 @@ public class Main extends ApplicationAdapter {
         //usado para encerrar o batch begin()
         batch.end();
 
-        // Desenha a caixa preta transparente no topo para poder aparecer o dialogo
+        // Desenha as duas caixas, uma para o dialogo e a outra para o status
         desenharCaixaDeTexto();
+        desenharCaixaDeStatus();
 
-        // Usado para escrever o texto da mensagem por cima da caixa
         batch.begin();
-        fonte.draw(batch, mensagemStatus, 25, Gdx.graphics.getHeight() - 22);
 
-        // Barra de vida e fome (tem que melhorar)
+        // Texto do dialogo
         fonte.draw(
             batch,
-            "PV: " + (int)pet.getPv()
+            mensagemStatus,
+            25,
+            Gdx.graphics.getHeight() - 22
+        );
+
+        // Texto do status
+        fonte.draw(
+            batch, "PV: " + (int) pet.getPv()
             + " | Fome: " + pet.getFome()
             + " | Felicidade: " + pet.getFelicidade()
             + " | Energia: " + pet.getEnergia(),
-            20,
-            25
+            20, 18
         );
 
         batch.end();
@@ -203,6 +208,23 @@ public class Main extends ApplicationAdapter {
         float y = Gdx.graphics.getHeight() - altura - 10;
 
         shapeRenderer.rect(x, y, largura, altura);
+        shapeRenderer.end();
+        Gdx.gl.glDisable(Gdx.graphics.getGL20().GL_BLEND);
+    }
+
+    private void desenharCaixaDeStatus() {
+        Gdx.gl.glEnable(Gdx.graphics.getGL20().GL_BLEND);
+
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+        shapeRenderer.setColor(0, 0, 0, 0.75f);
+
+        float largura = Gdx.graphics.getWidth() - 20;
+        float altura = 25;
+        float x = 10;
+        float y = 0;
+
+        shapeRenderer.rect(x, y, largura, altura);
+
         shapeRenderer.end();
         Gdx.gl.glDisable(Gdx.graphics.getGL20().GL_BLEND);
     }
