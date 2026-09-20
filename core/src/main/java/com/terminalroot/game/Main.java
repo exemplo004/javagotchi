@@ -303,7 +303,7 @@ public class Main extends ApplicationAdapter {
             comidaAtual = Randomizador.gerarNovoInimigo();
 
             mensagemStatus = "!!! VITORIA !!! Voce amassou o " + comidaMorta +
-                "! Um novo prato chamado" + comidaAtual.getTipo() +  " veio ao resgate de seu ex-parceiro!";
+                "! \n Um novo prato chamado " + comidaAtual.getTipo() +  " veio ao resgate de seu ex-parceiro!";
         
             if (Randomizador.chance(25)) {
                 Randomizador.trocarTalher(pet);
