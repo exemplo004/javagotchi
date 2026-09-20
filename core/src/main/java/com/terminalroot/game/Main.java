@@ -277,11 +277,15 @@ public class Main extends ApplicationAdapter {
         }
 
         if (comidaAtual.getPv() <= 0) {
-            mensagemStatus = "!!! VITORIA !!! Voce amassou o "
-                + comidaAtual.getTipo()
-                + "! Um novo prato chamado LASANHA veio ao resgate de seu ex parceiro!";
+            String comidaMorta = comidaAtual.getTipo().name();
+            comidaAtual = Randomizador.gerarNovoInimigo();
 
-            comidaAtual = new Inimigo(Inimigo.Tipo.LASANHA);
+            mensagemStatus = "!!! VITORIA !!! Voce amassou o " + comidaMorta +
+                "! Um novo prato chamado" + comidaAtual.getTipo() +  " veio ao resgate de seu ex-parceiro!";
+        
+            if (Randomizador.chance(25)) {
+                Randomizador.trocarTalher(pet);
+            }
         }
     }
 
